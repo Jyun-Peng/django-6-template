@@ -1,0 +1,11 @@
+include = ["*.py"]
+indent-width = 4
+target-version = "py314"
+
+[lint]
+select = ["E", "F", "B", "I"]
+ignore = ["E501"]
+
+[format]
+indent-style = "space"
+quote-style = "single"
