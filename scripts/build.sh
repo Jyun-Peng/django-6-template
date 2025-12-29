@@ -1,7 +1,9 @@
 #!/bin/bash
 
+set -euo pipefail
+
 cd "$(dirname "$0")"/..
 
-source scripts/set_env.sh
+export $(grep -v '^#' config/.env | xargs)
 
 podman build -t $IMAGE_NAME:$IMAGE_TAG .
